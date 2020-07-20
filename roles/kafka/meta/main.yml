@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  platforms:
+  - name: Debian
+    versions:
+    - 7
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+  author: Denis Bogomoltsev
+  description: An Ansible role for installing and configuring a kafka cluster.
+  company: DB
+  license: BSD
+  min_ansible_version: 2.2.3.0
+dependencies: []
