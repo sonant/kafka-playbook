@@ -28,3 +28,7 @@
 - include: kafka-cfg.yml
   tags:
     - kafka-cfg
+
+- include: kafka-acl.yml
+  tags:
+    - kafka-acl

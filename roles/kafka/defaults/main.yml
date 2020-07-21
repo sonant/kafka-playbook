@@ -11,6 +11,8 @@ kafka_version: "0.11.0.2"
 kafka_scala_version: "2.11"
 # NB: 2.11 is recommended at https://kafka.apache.org/downloads.html.
 
+kafka_acl_producers:
+
 kafka_java_enabled: true
 # set false if the role should not handle the java dependency
 kafka_java_version: "openjdk-7-jre-headless"
@@ -35,6 +37,7 @@ kafka_sig_tmp: "/tmp/kafka_{{ kafka_scala_version }}-{{ kafka_version }}.tar.gz.
 kafka_conf_dir: /etc/kafka
 kafka_data_dir: /var/kafka
 kafka_log_dir: /var/log/kafka
+kafka_bin_dir: /usr/local/kafka/bin
 
 kafka_user: kafka
 kafka_group: kafka

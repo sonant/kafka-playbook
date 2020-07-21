@@ -1,6 +1,8 @@
 ---
 zookeeper_hosts: ['localhost']
-
+kafka_acl_producers: 
+  - { topic: "demo", user: "demo" }
+  - { topic: "demo", user: "demo2" }
 kafka: ['localhost']
 ssl_client_auth: no
 # ssl_keystore_password: 111

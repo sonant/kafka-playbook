@@ -1,0 +1,4 @@
+---
+- name: "Apply acl"
+  shell: "{{ kafka_bin_dir }}/kafka-acls.sh --authorizer-properties zookeeper.connect={{ kafka_zookeeper_connection_string }} --add --allow-principal User:{{ item.user }} --producer --topic {{ item.topic }} "
+  with_items: "{{ kafka_acl_producers }}"
