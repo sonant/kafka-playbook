@@ -2,3 +2,7 @@
 zookeeper_hosts: ['localhost']
 
 kafka: ['localhost']
+ssl_client_auth: no
+# ssl_keystore_password: 111
+# ssl_truststore_password: 111
+# ssl_key_password: 111

@@ -80,14 +80,14 @@ kafka_server_defaults:
   advertised_port:
   advertised_listeners:
   listeners: PLAINTEXT://:9092,SSL://:9093
-  security_protocol:
-  ssl_keystore_location:
-  ssl_keystore_password:
+  security_protocol: SSL
+  ssl_keystore_location: "{{ kafka_conf_dir }}/kafka.keystore.jks"
+  ssl_keystore_password: 
   ssl_key_password:
-  ssl_truststore_location:
+  ssl_truststore_location: "{{ kafka_conf_dir }}/kafka.truststore.jks"
   ssl_truststore_password:
   ssl_enabled_protocols: TLSv1.2,TLSv1.1,TLSv1
-  ssl_client_auth:
+  ssl_client_auth: no
   socket_send_buffer_bytes: 102400
   socket_receive_buffer_bytes: 102400
   socket_request_max_bytes: 104857600

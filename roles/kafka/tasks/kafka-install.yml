@@ -50,3 +50,9 @@
 
 - name: "Symlink kafka_conf_dir to /usr/local/kafka/config"
   file: src=/usr/local/kafka/config path={{ kafka_conf_dir }} state=link
+
+- name: "Copy Keystore and Truststore Files"
+  copy: 
+    src: keys/
+    dest: "{{ kafka_conf_dir }}"
+  when: ssl_client_auth | bool

@@ -73,19 +73,19 @@ listeners={{ kafka_server.listeners }}
 security.protocol={{ kafka_server.security_protocol }}
 {% endif %}
 
-{% if kafka_server.ssl_keystore_location %}
+{% if kafka_server.ssl_client_auth %}
 ssl.keystore.location= {{ kafka_server.ssl_keystore_location }}
 {% endif %}
 
-{% if kafka_server.ssl_keystore_password %}
+{% if kafka_server.ssl_client_auth %}
 ssl.keystore.password= {{ kafka_server.ssl_keystore_password }}
 {% endif %}
 
-{% if kafka_server.ssl_key_password %}
+{% if kafka_server.ssl_client_auth %}
 ssl.key.password={{ kafka_server.ssl_key_password }}
 {% endif %}
 
-{% if kafka_server.ssl_truststore_location %}
+{% if kafka_server.ssl_client_auth %}
 ssl.truststore.location={{ kafka_server.ssl_truststore_location }}
 {% endif %}
 
@@ -93,12 +93,12 @@ ssl.truststore.location={{ kafka_server.ssl_truststore_location }}
 ssl.enabled.protocols={{ kafka_server.ssl_enabled_protocols }}
 {% endif %}
 
-{% if kafka_server.ssl_truststore_password %}
+{% if kafka_server.ssl_client_auth %}
 ssl.truststore.password={{ kafka_server.ssl_truststore_password }}
 {% endif %}
 
 {% if kafka_server.ssl_client_auth %}
-ssl.client.auth={{ kafka_server.ssl_client_auth }}
+ssl.client.auth=required
 {% endif %}
   
 
